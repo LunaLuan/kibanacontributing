@@ -1,0 +1,20 @@
+Error Detection and Corrections in OCR Applications
+
+Abstract
+An essential component of many applications in natural language processing is a modeler able to detect and correct errors in text being processed. With this proposal, I present some approaches to correct text in practice. I also show some methods to evaluate modeler. Correcting errors is a complex process, with several solutions and possibilites. For optical character recognition (OCR), poor scanning quality or extraneous pixels in the image may cause one or more characters to be mis-recognized; while for spelling correction (for human errors), two characters may be transposed, or a character may be inadvertently inserted or missed out. 
+
+
+Introduction
+Optical Character Recognition (OCR) is the process of converting document images to editable electronic format. Manual correction of OCR documents is very cumbersome. An OCR system even with accurancies as high as 90% is not sufficiently useful unless complemented by a partially automed mechanism for error detection and correction. Thus, error detection can be considered a very important step in post processing OCR words. 
+Automatic language correction have to:
+- spell checking: detect spelling errors in individual words,
+- grammar checking: incorrect use of person, number, case or gender, improper verb goverment, wrong word order, etc...
+- word completion: suggestion of the word currently being entered.
+Error detection in OCR output using dictionaries and statistical language models have become common pratice for sometime now while designing post-processors. Multiple strategies have been used successfully in English to achieve this. However, this has not yet translated towards improving error detection performance in many inflectional languages. Challenges such as large unique word list, lack of linguistic resources, lack of reliable language models, etc. are some of the reasons for this.
+
+
+http://www.slate2017.org/papers/SLaTE_2017_paper_5.pdf
+https://cdn.iiit.ac.in/cdn/cvit.iiit.ac.in/images/ConferencePapers/2013/Naveen2013Error.pdf
+file:///home/system-gru/Downloads/Error%20Detection%20and%20Corrections%20in%20Indic%20OCR%20using%20LSTMs.pdf
+
+

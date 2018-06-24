@@ -1,0 +1,31 @@
+ - Các phương pháp truyền thống:
+	+ Dựa vào tập từ điển. 
+
+1. Introduction:
+- OCR system even with accuracies as high as 90% is not sufficiently useful unless complemented by a partially automated mechanism for error 
+detection and correction.
+- Thus, error detection can be considered a very important step in post-processing OCR words.
+- RNNs have been found to be effective in learning character level language models.
+- Character-based attetion RNNs have also shown state-of-the-art results in Neural Language Correction.
+- In particular, a special type of RNNs, called LSTM remember larger contexts and therefore best suited for languages rich in OOV words.
+- We delay the output in LSTM model to take care of n-gram character confusion and succeeding contexts.
+- We present a model based on LSTM with a fixed delay that can learn, detect and correct OCR errors in addition to learning the language model.
+- In the process of manually correcting OCR documents, we frequently observe that the knowledge of error patterns is helpful in error detection and correction.
+- To correct such errors, we need not refer to original word image, since the information can be inferred from the error patterns and the context in OCR words. This observation is supported by our results.
+2. Related work:
+- Dictionary-based approaches to corrections have been explored in many word in the past.
+- These methods typically perform poorly in the absence of complete vocabularies.
+- These methods, however do not perform well for the inflectionally rich Indian languages.
+- OCR error detection for highly inflectional Indian languages faces challenges such as large unique word lists, lack of linguistic resources and lack of reliable language models.
+
+
+
+3. Problem scope, data description and analysis:
+- Some vocabulary characteristics (such as dynamism and size) can be analyzed through the graphs of unique words vs corpus length. 
+- We used Google's free OCR-service. 
+- Levenshtein-Damerau edit distance.
+
+
+4. LSTM model for Post-OCR Error Detection and Correction:
+- An LSTM can be used to predict characters that appear in a word based on preceding sequence of characters.
+- Character-based approaches have not (yet) attained state-of-the-art performance on language modeling tasks. 
